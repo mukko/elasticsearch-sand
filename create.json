@@ -1,0 +1,11 @@
+{
+    "filename": "hoge.adoc",
+    "extension": "adoc",
+    "title": "Hoge",
+    "commit_hash": "hogefugacommithash01234567890",
+    "content": "== Level1\nText.",
+    "raw_content": "Level1\nText.",
+    "info": {
+        "organization": "fuga"
+    }
+}
