@@ -1,0 +1,22 @@
+{
+  "name": "elasticsearch-sand",
+  "version": "1.0.0",
+  "description": "elasticsearch を docker でサクッとお試ししたいやつ   メモ含みます",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukko/elasticsearch-sand.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mukko/elasticsearch-sand/issues"
+  },
+  "homepage": "https://github.com/mukko/elasticsearch-sand#readme",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.13.0"
+  }
+}

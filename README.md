@@ -40,6 +40,10 @@ index を作って document を登録するのは基本的に変わらない流�
 
 v7 からは `type` は `_doc` 固定でほとんど問題なさそう？
 
+- インデックス作成
+  - PUT `/{index_name}` -H 'Content-Type: application/json' -d @japanese_settings.json
+- インデックス確認
+  - GET `/index_name`
 - ドキュメント作成
   - PUT `/index/type/document_id`
   - /hoge/\_doc/1
@@ -48,3 +52,14 @@ v7 からは `type` は `_doc` 固定でほとんど問題なさそう？
   - GET `/index/type/document_id`
   - 基本的に id 指定で取得する形
   - 全件取得したい場合は後述する検索クエリを利用する
+
+## マッピングメモ
+
+https://www.elastic.co/jp/blog/how-to-implement-japanese-full-text-search-in-elasticsearch
+
+ここを写経しながら、認識しやすいワードに変更した (japanese_settings.json)  
+`target_contents` というキーに入れた値が、日本語&bigram で解析されてインデクシングされるようになった
+ファイルに記述した書き方だと、ドキュメントが未登録の時しか適用できないかも
+
+PUT `/index` -d japanese_settings.json
+PUT `/index/_mapping/{type_name}` {mappings.properties 以下の部分}
